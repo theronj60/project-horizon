@@ -5,7 +5,12 @@ import (
 
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+	"github.com/theronj60/project-horizon/initializers"
 )
+
+func init() {
+	initializers.Connect()
+}
 
 func main() {
 	router := gin.Default()
