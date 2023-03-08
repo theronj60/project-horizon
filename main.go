@@ -16,7 +16,7 @@ func main() {
 	router := gin.Default()
 
 	// serve react index.html
-	router.Use(static.Serve("/", static.LocalFile("../frontend/dist", true)))
+	router.Use(static.Serve("/", static.LocalFile("./views/dist", true)))
 
 	// setup api route
 	api := router.Group("/api")

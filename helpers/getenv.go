@@ -8,11 +8,11 @@ import (
 )
 
 type Env struct {
-	Host string
-	User string
+	Host     string
+	User     string
 	Password string
-	Name string
-	Port string
+	Name     string
+	Port     string
 }
 
 func GetEnvData() Env {
@@ -23,11 +23,11 @@ func GetEnvData() Env {
 	}
 
 	envVar := Env{
-		Host: os.Getenv("DB_HOST"),
-		User: os.Getenv("DB_USER"),
+		Host:     os.Getenv("DB_HOST"),
+		User:     os.Getenv("DB_USER"),
 		Password: os.Getenv("DB_PASSWORD"),
-		Name: os.Getenv("DB_NAME"),
-		Port: os.Getenv("DB_PORT"),
+		Name:     os.Getenv("DB_NAME"),
+		Port:     os.Getenv("DB_PORT"),
 	}
 
 	return envVar
