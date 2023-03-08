@@ -1,0 +1,10 @@
+{
+	"trailingSlash":false,
+	"rewrites":
+	[
+		{
+			"source":"/backend(.*)",
+			"destination":"/backend/main.go"
+		}
+	]
+}
