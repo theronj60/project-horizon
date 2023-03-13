@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+	"github.com/theronj60/project-horizon/controllers"
 	"github.com/theronj60/project-horizon/initializers"
 )
 
@@ -26,12 +27,8 @@ func main() {
 				"message": "Hello World",
 			})
 		})
-		api.GET("/test", func(c *gin.Context) {
-			c.JSON(http.StatusOK, gin.H{
-				"message": "testing",
-				"test": "api",
-			})
-		})
+		api.GET("/users", controllers.UserIndex)
+		api.GET("/user/:id", controllers.UserShow)
 	}
 
 	router.Run(":3000")
